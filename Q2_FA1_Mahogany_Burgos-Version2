@@ -1,0 +1,39 @@
+num1= float(input("First number: "))#Considered as one of the addends, a minuend, a dividend, or a multiplicand.
+num2= float(input("Second number: "))#Considered as one of the addends, a subtrahend, a divisor, or a multiplier
+
+def add(a, b):#Function for addition
+    return a + b
+def subtract(a, b):#Function for subtraction
+    return a - b
+def multiply(a, b):#Function for multiplication
+    return a * b
+def divide(a, b):#Function for division
+    if b != 0:#If the divisor is assigned as zero, the function detects it and then prints an error message
+        return a / b
+
+    else:
+        return "Error: division by zero"#Error message
+
+operation = input("Choose an operation, either (A(Addition), S(Subtraction), M(Multiplication), or D(Division)): ")#Asks user for the operation to be used
+
+if operation == "A" or operation == "a":#Conditional function for addition
+    Answer="The sum of ",num1, "and ",num2, "is",add(num1, num2)
+elif operation == "S" or operation == "s":#Conditional function for subtraction
+    Answer="The difference of ",num1, "and ",num2, "is",subtract(num1, num2)
+elif operation == "M" or operation == "m":#Conditional function for multiplication
+    Answer="The product of ",num1, "and ",num2, "is",multiply(num1, num2)
+elif operation == "D" or operation == "d":#Conditional function for division
+    if num2 != 0:#If the divisor is assigned as zero, the function detects it and then prints an error message
+        Answer="The quotient of ",num1, "and ",num2, "is",divide(num1, num2)
+    else:
+        Answer="Error: division by zero"#ERror message
+else:
+    print("Invalid choice")#Error message
+
+print(Answer)#DIsplays the final answer
+
+# What functions did you create in your calculator program?: I created separate functions for addition, subtraction, multiplication, and division.
+# What parameters did your functions use?: Each function used two float numbers as parameters.
+# What arguments were passed when the functions were called?: The inputs entered by the user were passed as arguments.
+# How did your program use the returned value?: The program assigned the result by displaying the returned value.
+# Why is it better to divide the calculator program into functions instead of writing everything in one long block of code?: Using functions made the program easier to understand, fix, and reuse.
